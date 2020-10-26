@@ -2,6 +2,13 @@
   <div class="container">
     <h1>Request For Workload (RFW)</h1>
     <form @submit.prevent="processForm">
+
+      <label>Serialization Type</label>
+      <select v-model="serializationType" required>
+        <option>JSON</option>
+        <option>Proto</option>
+      </select>
+
       <label>RFW ID</label>
       <input type="text" v-model="rfwid" required/>
 
@@ -42,6 +49,7 @@ export default {
   },
   data()  {
     return {
+      serializationType: "JSON",
       rfwid: "",
       benchmarkType: "DVD",
       workloadMetric: "CPU",
@@ -53,7 +61,7 @@ export default {
   },
   methods: {
     async processForm() {
-      const url = `http://localhost:8082/api/json/rfw/${this.rfwid}/benchmark/${this.benchmarkType}/metric/${this.workloadMetric}/batch/${this.batchUnit}/${this.batchId}/${this.batchSize}`;
+      const url = `http://localhost:8082/api/${this.serializationType.toLowerCase()}/rfw/${this.rfwid}/benchmark/${this.benchmarkType}/metric/${this.workloadMetric}/batch/${this.batchUnit}/${this.batchId}/${this.batchSize}`;
       
       console.log("Sending Request For Workload...");
       console.log(url);
@@ -67,7 +75,16 @@ export default {
       )
       .then(response => response.json())
       .then(data => {
-          console.log('Success:', data);
+          console.log(data)
+          
+          if (this.serializationType.toLowerCase() === "proto") {
+            //deserialization of data received from the backend
+            console.log('Deserialization of proto data...');
+          }            
+          else if(this.serializationType.toLowerCase() === "json") {
+            //deserialization of data received from the backend
+            console.log('Deserialization of json data...');
+          }
       })
       .catch((error) => {
           console.error('Error:', error);
