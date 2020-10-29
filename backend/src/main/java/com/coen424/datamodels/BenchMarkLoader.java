@@ -1,6 +1,6 @@
-package com.coen424.datamodels.service;
+package com.coen424.datamodels;
 
-import com.coen424.datamodels.models.BenchMark;
+import com.coen424.datamodels.BenchMark;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

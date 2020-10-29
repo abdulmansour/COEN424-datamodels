@@ -1,4 +1,4 @@
-package com.coen424.datamodels.models;
+package com.coen424.datamodels;
 
 public class BenchMark {
 
