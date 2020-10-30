@@ -5,10 +5,10 @@ public class Request {
     private String benchmarkType;
     private String workloadMetric;
     private int batchUnit;
-    private String batchId;
+    private int batchId;
     private int batchSize;
 
-    public Request(String rfwid, String benchmarkType, String workloadMetric, int batchUnit, String batchId, int batchSize) {
+    public Request(String rfwid, String benchmarkType, String workloadMetric, int batchUnit, int batchId, int batchSize) {
         this.rfwid = rfwid;
         this.benchmarkType = benchmarkType;
         this.workloadMetric = workloadMetric;
@@ -49,11 +49,11 @@ public class Request {
         this.batchUnit = batchUnit;
     }
 
-    public String getBatchId() {
+    public int getBatchId() {
         return batchId;
     }
 
-    public void setBatchId(String batchId) {
+    public void setBatchId(int batchId) {
         this.batchId = batchId;
     }
 
@@ -63,5 +63,17 @@ public class Request {
 
     public void setBatchSize(int batchSize) {
         this.batchSize = batchSize;
+    }
+
+    @Override
+    public String toString() {
+        return "Request{" +
+                "rfwid='" + rfwid + '\'' +
+                ", benchmarkType='" + benchmarkType + '\'' +
+                ", workloadMetric='" + workloadMetric + '\'' +
+                ", batchUnit=" + batchUnit +
+                ", batchId=" + batchId +
+                ", batchSize=" + batchSize +
+                '}';
     }
 }

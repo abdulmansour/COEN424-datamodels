@@ -1,6 +1,9 @@
 package com.coen424.datamodels.controllers;
 
 import com.coen424.datamodels.models.Request;
+import com.coen424.datamodels.models.Workload;
+import com.coen424.datamodels.services.WorkloadService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,20 +12,24 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/proto")
 public class ProtoController {
 
+    @Autowired
+    private WorkloadService workloadService;
+
     @GetMapping("/rfw/{rfwid}/benchmark/{benchmark}/metric/{metric}/batch/{unit}/{id}/{size}")
     public ResponseEntity<Request> sendSerializedData(@PathVariable(name = "rfwid") String rfwid,
                                                       @PathVariable(name = "benchmark") String benchmark,
                                                       @PathVariable(name = "metric") String metric,
                                                       @PathVariable(name = "unit") int unit,
-                                                      @PathVariable(name = "id") String id,
+                                                      @PathVariable(name = "id") int id,
                                                       @PathVariable(name = "size") int size) {
 
         //This is the request received from the front end
         Request request = new Request(rfwid, benchmark, metric, unit, id, size);
         System.out.println(request.toString());
 
+        Workload workload = workloadService.getWorkload(request);
+
         /** TODO:
-         //... Fetch CSV Data
          //... Serialize data into proto binary based on datamodel
          //... Send serialized data to front-end (frontend will deserialize proto binary)
          */

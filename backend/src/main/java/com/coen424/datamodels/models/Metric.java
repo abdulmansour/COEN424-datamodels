@@ -1,24 +1,33 @@
-package com.coen424.datamodels;
+package com.coen424.datamodels.models;
 
-public class BenchMark {
+public class Metric {
 
-    private int cpuUtilization;
+    private double cpuUtilization;
     private double networkInAverage;
     private double networkOutAverage;
     private double memoryUlitlizationAverage;
+    private double chosenMetric;
 
-    public BenchMark(int cpu, double netIn, double netOut, double mem){
+    public Metric(int cpu, double netIn, double netOut, double mem){
         this.cpuUtilization = cpu;
         this.networkInAverage = netIn;
         this.networkOutAverage = netOut;
         this.memoryUlitlizationAverage = mem;
     }
 
-    public int getCpuUtilization() {
+    public double getChosenMetric() {
+        return chosenMetric;
+    }
+
+    public void setChosenMetric(double chosenMetric) {
+        this.chosenMetric = chosenMetric;
+    }
+
+    public double getCpuUtilization() {
         return cpuUtilization;
     }
 
-    public void setCpuUtilization(int cpuUtilization) {
+    public void setCpuUtilization(double cpuUtilization) {
         this.cpuUtilization = cpuUtilization;
     }
 
@@ -44,5 +53,12 @@ public class BenchMark {
 
     public void setMemoryUlitlizationAverage(double memoryUlitlizationAverage) {
         this.memoryUlitlizationAverage = memoryUlitlizationAverage;
+    }
+
+    @Override
+    public String toString() {
+        return "Metric{" +
+                "chosenMetric=" + chosenMetric +
+                '}';
     }
 }

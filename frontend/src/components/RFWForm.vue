@@ -14,8 +14,10 @@
 
       <label>Benchmark Type</label>
       <select v-model="benchmarkType" required>
-        <option>DVD</option>
-        <option>NDBench</option>
+        <option>DVD-testing</option>
+        <option>DVD-training</option>
+        <option>NDBench-testing</option>
+        <option>NDBench-training</option>
       </select>
 
       <label>Workload Metric</label>
@@ -26,18 +28,24 @@
           <option>Memory</option>
       </select>
 
-      <label>Batch Unit</label>
-      <input type="number" v-model="batchUnit" required/>
+      <label>Batch Unit</label> <!-- how many rows you want per batch -->
+      <input type="number" min="1" v-model="batchUnit" required/>
 
-      <label>Batch ID</label>
-      <input type="text" v-model="batchId" required/>
+      <label>Batch ID</label> <!-- start at row:  batch id * batch unit-->
+      <input type="number" min="1" v-model="batchId" required/>
 
-      <label>Batch Size</label>
-      <input type="number" v-model="batchSize" required/>
+      <label>Batch Size</label> <!-- how many batches you want -->
+      <input type="number" min="1" v-model="batchSize" required/>
 
       <input type="submit" value="Submit"/>
-
     </form>
+    <!--
+    <div>
+      <p>{{ this.desirealizedData }}</p>
+    </div>
+
+    <button v-if='this.desirealizedData !== ""' class="button" @click="clearDeserializedData">Clear</button>
+    -->
   </div>
 </template>
 
@@ -50,13 +58,14 @@ export default {
   data()  {
     return {
       serializationType: "JSON",
-      rfwid: "",
-      benchmarkType: "DVD",
+      rfwid: 123456789,
+      benchmarkType: "DVD-testing",
       workloadMetric: "CPU",
-      batchUnit: 0,
-      batchId: "",
-      batchSize: 0
+      batchUnit: 4,
+      batchId: 1,
+      batchSize: 2,
 
+      desirealizedData: ""
     }
   },
   methods: {
@@ -66,29 +75,46 @@ export default {
       console.log("Sending Request For Workload...");
       console.log(url);
 
-      await fetch(url, {
+      if (this.serializationType.toLowerCase() === "json") {
+        await fetch(url, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
-          }
-        }
-      )
-      .then(response => response.json())
-      .then(data => {
-          console.log(data)
-          
-          if (this.serializationType.toLowerCase() === "proto") {
-            //deserialization of data received from the backend
-            console.log('Deserialization of proto data...');
-          }            
-          else if(this.serializationType.toLowerCase() === "json") {
-            //deserialization of data received from the backend
-            console.log('Deserialization of json data...');
-          }
-      })
-      .catch((error) => {
-          console.error('Error:', error);
-      });
+          }})
+          .then(response => response.json()
+          )
+          .then(data => {
+
+              this.desirealizedData = data;
+              console.log('deserialized data', this.desirealizedData);
+              
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+      }
+      else if (this.serializationType.toLowerCase() === "proto") {
+        await fetch(url, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/octet-stream',
+          }})
+          .then(response => response.blob())
+          .then(data => {
+
+              console.log('response', data);       
+
+              console.log('Deserialization of json data...');
+              //deserialization of data received from the backend
+              
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+      }
+    },
+    clearDeserializedData() {
+      this.desirealizedData = "";
     }
   }
 }
@@ -110,7 +136,7 @@ export default {
     box-sizing: border-box;
   }
 
-  input[type=submit]:hover {
+  input[type=submit]:hover, button {
     background-color: #969696;
     cursor: pointer;
   }
