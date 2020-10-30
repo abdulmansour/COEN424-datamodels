@@ -12,7 +12,7 @@ public class DatamodelsApplication {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		ArrayList<BenchMark> dataset = new ArrayList<BenchMark>();
-		BenchMarkLoader loader = new BenchMarkLoader("/Users/Joseph D'Onofrio/Desktop/Reader/Data/DVD-testing.csv");
+		BenchMarkLoader loader = new BenchMarkLoader("/Users/Joseph D'Onofrio/Desktop/Reader/Data/DVD-testing.csv"); //check path
 
 		dataset = loader.benchMarkFile();
 
