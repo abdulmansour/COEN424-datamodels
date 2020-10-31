@@ -1,11 +1,14 @@
 package com.coen424.datamodels.models;
 
+import com.google.gson.annotations.Expose;
+
 public class Metric {
 
     private double cpuUtilization;
     private double networkInAverage;
     private double networkOutAverage;
     private double memoryUlitlizationAverage;
+    @Expose
     private double chosenMetric;
 
     public Metric(int cpu, double netIn, double netOut, double mem){

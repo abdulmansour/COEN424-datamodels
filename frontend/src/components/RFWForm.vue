@@ -81,12 +81,12 @@ export default {
           headers: {
               'Content-Type': 'application/json',
           }})
-          .then(response => response.json()
-          )
+          .then(response => response.json())
           .then(data => {
 
               this.desirealizedData = data;
-              console.log('deserialized data', this.desirealizedData);
+              console.log('deserializedData', this.desirealizedData);
+              console.log('deserializedData stringified', JSON.stringify(this.desirealizedData, null, 2));
               
           })
           .catch((error) => {

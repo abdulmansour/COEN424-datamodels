@@ -82,6 +82,18 @@ public class WorkloadService {
 
         workload.setSamplesRequested(requiredBatches);
         workload.setLastBatchId(end);
+
+        //print out the workload
+        System.out.println(workload.toString());
+        int i = request.getBatchId() < workload.getLastBatchId()? request.getBatchId():(int)workload.getLastBatchId();
+        for (List<Metric> batch:workload.getSamplesRequested()) {
+            System.out.println(i++);
+            for (Metric m:batch) {
+                System.out.println(m.toString());
+            }
+        }
+        System.out.println();
+
         return workload;
     }
 }

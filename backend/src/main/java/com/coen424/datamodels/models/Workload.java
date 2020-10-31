@@ -1,10 +1,15 @@
 package com.coen424.datamodels.models;
 
+import com.google.gson.annotations.Expose;
+
 import java.util.List;
 
 public class Workload {
+    @Expose
     private String rfwid;
+    @Expose
     private long lastBatchId;
+    @Expose
     private List<List<Metric>> samplesRequested;
 
     public Workload(String rfwid, long lastBatchId, List<List<Metric>> samplesRequested) {

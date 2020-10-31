@@ -4,6 +4,8 @@ import com.coen424.datamodels.models.Metric;
 import com.coen424.datamodels.models.Request;
 import com.coen424.datamodels.models.Workload;
 import com.coen424.datamodels.services.WorkloadService;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +21,7 @@ public class JsonController {
     private WorkloadService workloadService;
 
     @GetMapping("/rfw/{rfwid}/benchmark/{benchmark}/metric/{metric}/batch/{unit}/{id}/{size}")
-    public ResponseEntity<Workload> sendSerializedData(@PathVariable(name = "rfwid") String rfwid,
+    public ResponseEntity<String> sendSerializedData(@PathVariable(name = "rfwid") String rfwid,
                                                       @PathVariable(name = "benchmark") String benchmark,
                                                       @PathVariable(name = "metric") String metric,
                                                       @PathVariable(name = "unit") int unit,
@@ -30,22 +32,13 @@ public class JsonController {
         Request request = new Request(rfwid, benchmark, metric, unit, id, size);
         System.out.println(request.toString());
 
+        //... Obtain workload based on request
         Workload workload = workloadService.getWorkload(request);
-
-        System.out.println(workload.toString());
-        int i = request.getBatchId() < workload.getLastBatchId()? request.getBatchId():(int)workload.getLastBatchId();
-        for (List<Metric> batch:workload.getSamplesRequested()) {
-            System.out.println(i++);
-            for (Metric m:batch) {
-                System.out.println(m.toString());
-            }
-        }
-        System.out.println();
-        /** TODO:
-        //... Serialize data into JSON based on datamodel
+        //... Serialize workload into JSON
+        Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+        String json = gson.toJson(workload);
+        System.out.println(json);
         //... Send serialized data to front-end (frontend will deserialize JSON)
-         */
-
-        return ResponseEntity.ok(workload);
+        return ResponseEntity.ok(json);
     }
 }

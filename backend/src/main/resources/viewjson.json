@@ -1,0 +1,66 @@
+{
+  "rfwid": "123456789",
+  "lastBatchId": 2,
+  "samplesRequested": [
+    [
+      {
+        "cpuUtilization": 62.0,
+        "networkInAverage": 2.31322149E8,
+        "networkOutAverage": 2.23419718E8,
+        "memoryUlitlizationAverage": 45.74155858,
+        "chosenMetric": 62.0
+      },
+      {
+        "cpuUtilization": 65.0,
+        "networkInAverage": 2.60661198E8,
+        "networkOutAverage": 2.49603568E8,
+        "memoryUlitlizationAverage": 50.81674683,
+        "chosenMetric": 65.0
+      },
+      {
+        "cpuUtilization": 66.0,
+        "networkInAverage": 2.80470095E8,
+        "networkOutAverage": 2.66144855E8,
+        "memoryUlitlizationAverage": 55.1960652,
+        "chosenMetric": 66.0
+      },
+      {
+        "cpuUtilization": 66.0,
+        "networkInAverage": 2.86492234E8,
+        "networkOutAverage": 2.69348322E8,
+        "memoryUlitlizationAverage": 58.30492366,
+        "chosenMetric": 66.0
+      }
+    ],
+    [
+      {
+        "cpuUtilization": 66.0,
+        "networkInAverage": 2.80274041E8,
+        "networkOutAverage": 2.61228502E8,
+        "memoryUlitlizationAverage": 60.33305334,
+        "chosenMetric": 66.0
+      },
+      {
+        "cpuUtilization": 65.0,
+        "networkInAverage": 2.67113409E8,
+        "networkOutAverage": 2.47336824E8,
+        "memoryUlitlizationAverage": 61.85389429,
+        "chosenMetric": 65.0
+      },
+      {
+        "cpuUtilization": 64.0,
+        "networkInAverage": 2.51404426E8,
+        "networkOutAverage": 2.32074892E8,
+        "memoryUlitlizationAverage": 63.19051181,
+        "chosenMetric": 64.0
+      },
+      {
+        "cpuUtilization": 61.0,
+        "networkInAverage": 2.33958362E8,
+        "networkOutAverage": 2.16034187E8,
+        "memoryUlitlizationAverage": 64.15612753,
+        "chosenMetric": 61.0
+      }
+    ]
+  ]
+}
