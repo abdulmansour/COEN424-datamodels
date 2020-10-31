@@ -53,7 +53,7 @@ public class WorkloadService {
                 batches.add(benchmark.subList(i, i + request.getBatchUnit()));
             }
             else {
-                //batches.add(benchmark.subList(i, i + ( i + request.getBatchUnit() - benchmark.size()-1)));
+                batches.add(benchmark.subList(i, i + ( i + request.getBatchUnit() - benchmark.size()-1)));
                 //or ignore last batch if reaches limit...
             }
         }
@@ -81,7 +81,7 @@ public class WorkloadService {
         }
 
         workload.setSamplesRequested(requiredBatches);
-        workload.setLastBatchId(end);
+        workload.setLastBatchId(batches.size() < request.getBatchId()? -1*end:end);
 
         //print out the workload
         System.out.println(workload.toString());

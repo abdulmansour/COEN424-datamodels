@@ -35,7 +35,7 @@ public class JsonController {
         //... Obtain workload based on request
         Workload workload = workloadService.getWorkload(request);
         //... Serialize workload into JSON
-        Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().serializeNulls().create();
         String json = gson.toJson(workload);
         System.out.println(json);
         //... Send serialized data to front-end (frontend will deserialize JSON)

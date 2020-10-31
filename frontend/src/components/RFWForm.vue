@@ -61,7 +61,7 @@ export default {
       rfwid: 123456789,
       benchmarkType: "DVD-testing",
       workloadMetric: "CPU",
-      batchUnit: 4,
+      batchUnit: 7,
       batchId: 1,
       batchSize: 2,
 
