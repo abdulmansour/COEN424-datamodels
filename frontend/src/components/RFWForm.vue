@@ -39,13 +39,13 @@
 
       <input type="submit" value="Submit"/>
     </form>
-    <!--
+    
     <div>
       <p>{{ this.desirealizedData }}</p>
     </div>
 
     <button v-if='this.desirealizedData !== ""' class="button" @click="clearDeserializedData">Clear</button>
-    -->
+    
   </div>
 </template>
 
@@ -113,6 +113,7 @@ export default {
               console.log('response', output.getLastid());
               console.log('response', output.getBatchesList());       
 
+              this.desirealizedData = "RFW ID: " + output.getRfwid() + "\nLast Batch ID: " + output.getLastid() + "\nYour Requested Batches:\n" + output.getBatchesList();
 
               console.log('Deserialization of json data...');
               //deserialization of data received from the backend
