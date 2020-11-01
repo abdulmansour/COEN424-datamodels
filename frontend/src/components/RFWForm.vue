@@ -111,9 +111,11 @@ export default {
             output = Schema.Batches.deserializeBinary(arrayData); //new Uint8Array(response))
               console.log('response', output.getRfwid());
               console.log('response', output.getLastid());
-              console.log('response', output.getBatchesList());       
+              console.log('response', output.getBatchesList());  
+              
+              const batchList = output.getBatchesList(); //array of our metrics
 
-              this.desirealizedData = "RFW ID: " + output.getRfwid() + "\nLast Batch ID: " + output.getLastid() + "\nYour Requested Batches:\n" + output.getBatchesList();
+              this.desirealizedData = "RFW ID: " + output.getRfwid() + "\nLast Batch ID: " + output.getLastid() + "\nYour Requested Batches:\n";
 
               console.log('Deserialization of json data...');
               //deserialization of data received from the backend
