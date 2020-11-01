@@ -6,23 +6,23 @@ import java.util.List;
 
 public class Workload {
     @Expose
-    private String rfwid;
+    private int rfwid;
     @Expose
     private long lastBatchId;
     @Expose
     private List<List<Metric>> samplesRequested;
 
-    public Workload(String rfwid, long lastBatchId, List<List<Metric>> samplesRequested) {
+    public Workload(int rfwid, long lastBatchId, List<List<Metric>> samplesRequested) {
         this.rfwid = rfwid;
         this.lastBatchId = lastBatchId;
         this.samplesRequested = samplesRequested;
     }
 
-    public String getRfwid() {
+    public int getRfwid() {
         return rfwid;
     }
 
-    public void setRfwid(String rfwid) {
+    public void setRfwid(int rfwid) {
         this.rfwid = rfwid;
     }
 

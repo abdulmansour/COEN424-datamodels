@@ -50,6 +50,9 @@
 </template>
 
 <script>
+const Schema = require("../response_pb");
+import Axios from 'axios'
+let output = new Schema.Batches();
 export default {
   name: 'RFWForm',
   props: {
@@ -94,15 +97,22 @@ export default {
           });
       }
       else if (this.serializationType.toLowerCase() === "proto") {
-        await fetch(url, {
-          method: 'GET',
+        Axios.get(url, {
+          responseType: "arraybuffer",  
+        //, {
+          //method: 'GET'
           headers: {
-              'Content-Type': 'application/octet-stream',
-          }})
-          .then(response => response.blob())
-          .then(data => {
+              'Content-Type': 'application/x-protobuf'}
+              } 
+          )
+          .then(response => {
+            let arrayData = new Uint8Array(response.data)
+            console.log('u8intArray data:', arrayData)
+            output = Schema.Batches.deserializeBinary(arrayData); //new Uint8Array(response))
+              console.log('response', output.getRfwid());
+              console.log('response', output.getLastid());
+              console.log('response', output.getBatchesList());       
 
-              console.log('response', data);       
 
               console.log('Deserialization of json data...');
               //deserialization of data received from the backend

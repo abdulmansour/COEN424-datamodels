@@ -1,8 +1,10 @@
 package com.coen424.datamodels.services;
 
+import com.coen424.datamodels.models.BatchLoader;
 import com.coen424.datamodels.models.Metric;
 import com.coen424.datamodels.models.Request;
 import com.coen424.datamodels.models.Workload;
+import com.google.protobuf.InvalidProtocolBufferException;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +43,24 @@ public class WorkloadService {
             }
         }
     }
+
+    public Response.Batches.Builder getWorkloadProto(Request request) {
+        ArrayList<Metric> benchmark = benchmarks.get(request.getBenchmarkType());
+        BatchLoader batch = new BatchLoader(request, benchmark);
+        Response.Batches.Builder message = batch.generator();
+
+        System.out.println(message);
+        /*try {
+            Response.Batches.Builder batchOut = Response.Batches.parseFrom(message).toBuilder();
+
+            System.out.println(batchOut);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }*/
+        return message;
+    }
+
 
     public Workload getWorkload(Request request)  {
         ArrayList<Metric> benchmark = benchmarks.get(request.getBenchmarkType());

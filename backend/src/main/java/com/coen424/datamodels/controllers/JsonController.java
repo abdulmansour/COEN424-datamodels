@@ -21,7 +21,7 @@ public class JsonController {
     private WorkloadService workloadService;
 
     @GetMapping("/rfw/{rfwid}/benchmark/{benchmark}/metric/{metric}/batch/{unit}/{id}/{size}")
-    public ResponseEntity<String> sendSerializedData(@PathVariable(name = "rfwid") String rfwid,
+    public ResponseEntity<String> sendSerializedData(@PathVariable(name = "rfwid") int rfwid,
                                                       @PathVariable(name = "benchmark") String benchmark,
                                                       @PathVariable(name = "metric") String metric,
                                                       @PathVariable(name = "unit") int unit,

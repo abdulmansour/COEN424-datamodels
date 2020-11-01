@@ -61,7 +61,11 @@ public class Metric {
     @Override
     public String toString() {
         return "Metric{" +
-                "chosenMetric=" + chosenMetric +
+                "cpuUtilization=" + cpuUtilization +
+                ", networkInAverage=" + networkInAverage +
+                ", networkOutAverage=" + networkOutAverage +
+                ", memoryUlitlizationAverage=" + memoryUlitlizationAverage +
+                ", chosenMetric=" + chosenMetric +
                 '}';
     }
 }

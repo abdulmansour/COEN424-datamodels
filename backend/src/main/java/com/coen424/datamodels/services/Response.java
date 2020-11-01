@@ -12,982 +12,6 @@ public final class Response {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RfwidOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Rfwid)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 rfwid = 1;</code>
-     * @return The rfwid.
-     */
-    int getRfwid();
-  }
-  /**
-   * Protobuf type {@code Rfwid}
-   */
-  public static final class Rfwid extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Rfwid)
-      RfwidOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Rfwid.newBuilder() to construct.
-    private Rfwid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Rfwid() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Rfwid();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Rfwid(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              rfwid_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Response.internal_static_Rfwid_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Response.internal_static_Rfwid_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Response.Rfwid.class, Response.Rfwid.Builder.class);
-    }
-
-    public static final int RFWID_FIELD_NUMBER = 1;
-    private int rfwid_;
-    /**
-     * <code>int32 rfwid = 1;</code>
-     * @return The rfwid.
-     */
-    @java.lang.Override
-    public int getRfwid() {
-      return rfwid_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (rfwid_ != 0) {
-        output.writeInt32(1, rfwid_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (rfwid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, rfwid_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Response.Rfwid)) {
-        return super.equals(obj);
-      }
-      Response.Rfwid other = (Response.Rfwid) obj;
-
-      if (getRfwid()
-          != other.getRfwid()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RFWID_FIELD_NUMBER;
-      hash = (53 * hash) + getRfwid();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Response.Rfwid parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Response.Rfwid parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Response.Rfwid parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Response.Rfwid parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Response.Rfwid parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Response.Rfwid parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Response.Rfwid parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Response.Rfwid parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Response.Rfwid parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Response.Rfwid parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Response.Rfwid parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Response.Rfwid parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Response.Rfwid prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Rfwid}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Rfwid)
-        Response.RfwidOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Response.internal_static_Rfwid_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Response.internal_static_Rfwid_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Response.Rfwid.class, Response.Rfwid.Builder.class);
-      }
-
-      // Construct using Response.Rfwid.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        rfwid_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Response.internal_static_Rfwid_descriptor;
-      }
-
-      @java.lang.Override
-      public Response.Rfwid getDefaultInstanceForType() {
-        return Response.Rfwid.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public Response.Rfwid build() {
-        Response.Rfwid result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public Response.Rfwid buildPartial() {
-        Response.Rfwid result = new Response.Rfwid(this);
-        result.rfwid_ = rfwid_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Response.Rfwid) {
-          return mergeFrom((Response.Rfwid)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Response.Rfwid other) {
-        if (other == Response.Rfwid.getDefaultInstance()) return this;
-        if (other.getRfwid() != 0) {
-          setRfwid(other.getRfwid());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Response.Rfwid parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Response.Rfwid) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int rfwid_ ;
-      /**
-       * <code>int32 rfwid = 1;</code>
-       * @return The rfwid.
-       */
-      @java.lang.Override
-      public int getRfwid() {
-        return rfwid_;
-      }
-      /**
-       * <code>int32 rfwid = 1;</code>
-       * @param value The rfwid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRfwid(int value) {
-        
-        rfwid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 rfwid = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRfwid() {
-        
-        rfwid_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Rfwid)
-    }
-
-    // @@protoc_insertion_point(class_scope:Rfwid)
-    private static final Response.Rfwid DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Response.Rfwid();
-    }
-
-    public static Response.Rfwid getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Rfwid>
-        PARSER = new com.google.protobuf.AbstractParser<Rfwid>() {
-      @java.lang.Override
-      public Rfwid parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Rfwid(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Rfwid> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Rfwid> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public Response.Rfwid getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface LastBatchIDOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:LastBatchID)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 lastID = 1;</code>
-     * @return The lastID.
-     */
-    int getLastID();
-  }
-  /**
-   * Protobuf type {@code LastBatchID}
-   */
-  public static final class LastBatchID extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:LastBatchID)
-      LastBatchIDOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use LastBatchID.newBuilder() to construct.
-    private LastBatchID(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private LastBatchID() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new LastBatchID();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LastBatchID(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              lastID_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return Response.internal_static_LastBatchID_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return Response.internal_static_LastBatchID_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Response.LastBatchID.class, Response.LastBatchID.Builder.class);
-    }
-
-    public static final int LASTID_FIELD_NUMBER = 1;
-    private int lastID_;
-    /**
-     * <code>int32 lastID = 1;</code>
-     * @return The lastID.
-     */
-    @java.lang.Override
-    public int getLastID() {
-      return lastID_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (lastID_ != 0) {
-        output.writeInt32(1, lastID_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (lastID_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, lastID_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Response.LastBatchID)) {
-        return super.equals(obj);
-      }
-      Response.LastBatchID other = (Response.LastBatchID) obj;
-
-      if (getLastID()
-          != other.getLastID()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LASTID_FIELD_NUMBER;
-      hash = (53 * hash) + getLastID();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Response.LastBatchID parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Response.LastBatchID parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Response.LastBatchID parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Response.LastBatchID parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Response.LastBatchID parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Response.LastBatchID parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Response.LastBatchID parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Response.LastBatchID parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Response.LastBatchID parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Response.LastBatchID parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Response.LastBatchID parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Response.LastBatchID parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Response.LastBatchID prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code LastBatchID}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:LastBatchID)
-        Response.LastBatchIDOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return Response.internal_static_LastBatchID_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return Response.internal_static_LastBatchID_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Response.LastBatchID.class, Response.LastBatchID.Builder.class);
-      }
-
-      // Construct using Response.LastBatchID.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        lastID_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return Response.internal_static_LastBatchID_descriptor;
-      }
-
-      @java.lang.Override
-      public Response.LastBatchID getDefaultInstanceForType() {
-        return Response.LastBatchID.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public Response.LastBatchID build() {
-        Response.LastBatchID result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public Response.LastBatchID buildPartial() {
-        Response.LastBatchID result = new Response.LastBatchID(this);
-        result.lastID_ = lastID_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Response.LastBatchID) {
-          return mergeFrom((Response.LastBatchID)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Response.LastBatchID other) {
-        if (other == Response.LastBatchID.getDefaultInstance()) return this;
-        if (other.getLastID() != 0) {
-          setLastID(other.getLastID());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Response.LastBatchID parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Response.LastBatchID) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int lastID_ ;
-      /**
-       * <code>int32 lastID = 1;</code>
-       * @return The lastID.
-       */
-      @java.lang.Override
-      public int getLastID() {
-        return lastID_;
-      }
-      /**
-       * <code>int32 lastID = 1;</code>
-       * @param value The lastID to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLastID(int value) {
-        
-        lastID_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 lastID = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLastID() {
-        
-        lastID_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:LastBatchID)
-    }
-
-    // @@protoc_insertion_point(class_scope:LastBatchID)
-    private static final Response.LastBatchID DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Response.LastBatchID();
-    }
-
-    public static Response.LastBatchID getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<LastBatchID>
-        PARSER = new com.google.protobuf.AbstractParser<LastBatchID>() {
-      @java.lang.Override
-      public LastBatchID parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LastBatchID(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<LastBatchID> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<LastBatchID> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public Response.LastBatchID getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface MetricOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Metric)
       com.google.protobuf.MessageOrBuilder {
@@ -1019,14 +43,14 @@ public final class Response {
     private Metric() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Metric();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1037,7 +61,7 @@ public final class Response {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1083,12 +107,12 @@ public final class Response {
       return Response.internal_static_Metric_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return Response.internal_static_Metric_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Response.Metric.class, Response.Metric.Builder.class);
+              Metric.class, Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1097,7 +121,7 @@ public final class Response {
      * <code>int32 id = 1;</code>
      * @return The id.
      */
-    @java.lang.Override
+    @Override
     public int getId() {
       return id_;
     }
@@ -1108,13 +132,13 @@ public final class Response {
      * <code>double metric = 2;</code>
      * @return The metric.
      */
-    @java.lang.Override
+    @Override
     public double getMetric() {
       return metric_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1124,7 +148,7 @@ public final class Response {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
@@ -1136,7 +160,7 @@ public final class Response {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1155,26 +179,26 @@ public final class Response {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Response.Metric)) {
+      if (!(obj instanceof Metric)) {
         return super.equals(obj);
       }
-      Response.Metric other = (Response.Metric) obj;
+      Metric other = (Metric) obj;
 
       if (getId()
           != other.getId()) return false;
-      if (java.lang.Double.doubleToLongBits(getMetric())
-          != java.lang.Double.doubleToLongBits(
+      if (Double.doubleToLongBits(getMetric())
+          != Double.doubleToLongBits(
               other.getMetric())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1185,75 +209,75 @@ public final class Response {
       hash = (53 * hash) + getId();
       hash = (37 * hash) + METRIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getMetric()));
+          Double.doubleToLongBits(getMetric()));
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Metric parseFrom(byte[] data)
+    public static Metric parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Metric parseFrom(java.io.InputStream input)
+    public static Metric parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response.Metric parseDelimitedFrom(java.io.InputStream input)
+    public static Metric parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Response.Metric parseDelimitedFrom(
+    public static Metric parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response.Metric parseFrom(
+    public static Metric parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1261,23 +285,23 @@ public final class Response {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Response.Metric prototype) {
+    public static Builder newBuilder(Metric prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1287,18 +311,18 @@ public final class Response {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Metric)
-        Response.MetricOrBuilder {
+        MetricOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Response.internal_static_Metric_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return Response.internal_static_Metric_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Response.Metric.class, Response.Metric.Builder.class);
+                Metric.class, Builder.class);
       }
 
       // Construct using Response.Metric.newBuilder()
@@ -1307,7 +331,7 @@ public final class Response {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1316,7 +340,7 @@ public final class Response {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         id_ = 0;
@@ -1326,79 +350,79 @@ public final class Response {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return Response.internal_static_Metric_descriptor;
       }
 
-      @java.lang.Override
-      public Response.Metric getDefaultInstanceForType() {
-        return Response.Metric.getDefaultInstance();
+      @Override
+      public Metric getDefaultInstanceForType() {
+        return Metric.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public Response.Metric build() {
-        Response.Metric result = buildPartial();
+      @Override
+      public Metric build() {
+        Metric result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public Response.Metric buildPartial() {
-        Response.Metric result = new Response.Metric(this);
+      @Override
+      public Metric buildPartial() {
+        Metric result = new Metric(this);
         result.id_ = id_;
         result.metric_ = metric_;
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Response.Metric) {
-          return mergeFrom((Response.Metric)other);
+        if (other instanceof Metric) {
+          return mergeFrom((Metric)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Response.Metric other) {
-        if (other == Response.Metric.getDefaultInstance()) return this;
+      public Builder mergeFrom(Metric other) {
+        if (other == Metric.getDefaultInstance()) return this;
         if (other.getId() != 0) {
           setId(other.getId());
         }
@@ -1410,21 +434,21 @@ public final class Response {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Response.Metric parsedMessage = null;
+        Metric parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Response.Metric) e.getUnfinishedMessage();
+          parsedMessage = (Metric) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1439,7 +463,7 @@ public final class Response {
        * <code>int32 id = 1;</code>
        * @return The id.
        */
-      @java.lang.Override
+      @Override
       public int getId() {
         return id_;
       }
@@ -1470,7 +494,7 @@ public final class Response {
        * <code>double metric = 2;</code>
        * @return The metric.
        */
-      @java.lang.Override
+      @Override
       public double getMetric() {
         return metric_;
       }
@@ -1495,13 +519,13 @@ public final class Response {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1512,18 +536,18 @@ public final class Response {
     }
 
     // @@protoc_insertion_point(class_scope:Metric)
-    private static final Response.Metric DEFAULT_INSTANCE;
+    private static final Metric DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Response.Metric();
+      DEFAULT_INSTANCE = new Metric();
     }
 
-    public static Response.Metric getDefaultInstance() {
+    public static Metric getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Metric>
         PARSER = new com.google.protobuf.AbstractParser<Metric>() {
-      @java.lang.Override
+      @Override
       public Metric parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1536,13 +560,13 @@ public final class Response {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Metric> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public Response.Metric getDefaultInstanceForType() {
+    @Override
+    public Metric getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1555,12 +579,12 @@ public final class Response {
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    java.util.List<Response.Metric> 
+    java.util.List<Metric>
         getMetricsList();
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    Response.Metric getMetrics(int index);
+    Metric getMetrics(int index);
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
@@ -1568,12 +592,12 @@ public final class Response {
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    java.util.List<? extends Response.MetricOrBuilder> 
+    java.util.List<? extends MetricOrBuilder>
         getMetricsOrBuilderList();
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    Response.MetricOrBuilder getMetricsOrBuilder(
+    MetricOrBuilder getMetricsOrBuilder(
         int index);
   }
   /**
@@ -1592,14 +616,14 @@ public final class Response {
       metrics_ = java.util.Collections.emptyList();
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Batch();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1610,7 +634,7 @@ public final class Response {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -1625,11 +649,11 @@ public final class Response {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metrics_ = new java.util.ArrayList<Response.Metric>();
+                metrics_ = new java.util.ArrayList<Metric>();
                 mutable_bitField0_ |= 0x00000001;
               }
               metrics_.add(
-                  input.readMessage(Response.Metric.parser(), extensionRegistry));
+                  input.readMessage(Metric.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -1659,56 +683,56 @@ public final class Response {
       return Response.internal_static_Batch_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return Response.internal_static_Batch_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Response.Batch.class, Response.Batch.Builder.class);
+              Batch.class, Builder.class);
     }
 
     public static final int METRICS_FIELD_NUMBER = 1;
-    private java.util.List<Response.Metric> metrics_;
+    private java.util.List<Metric> metrics_;
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    @java.lang.Override
-    public java.util.List<Response.Metric> getMetricsList() {
+    @Override
+    public java.util.List<Metric> getMetricsList() {
       return metrics_;
     }
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    @java.lang.Override
-    public java.util.List<? extends Response.MetricOrBuilder> 
+    @Override
+    public java.util.List<? extends MetricOrBuilder>
         getMetricsOrBuilderList() {
       return metrics_;
     }
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    @java.lang.Override
+    @Override
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    @java.lang.Override
-    public Response.Metric getMetrics(int index) {
+    @Override
+    public Metric getMetrics(int index) {
       return metrics_.get(index);
     }
     /**
      * <code>repeated .Metric metrics = 1;</code>
      */
-    @java.lang.Override
-    public Response.MetricOrBuilder getMetricsOrBuilder(
+    @Override
+    public MetricOrBuilder getMetricsOrBuilder(
         int index) {
       return metrics_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1718,7 +742,7 @@ public final class Response {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < metrics_.size(); i++) {
@@ -1727,7 +751,7 @@ public final class Response {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1742,15 +766,15 @@ public final class Response {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Response.Batch)) {
+      if (!(obj instanceof Batch)) {
         return super.equals(obj);
       }
-      Response.Batch other = (Response.Batch) obj;
+      Batch other = (Batch) obj;
 
       if (!getMetricsList()
           .equals(other.getMetricsList())) return false;
@@ -1758,7 +782,7 @@ public final class Response {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1774,69 +798,69 @@ public final class Response {
       return hash;
     }
 
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Batch parseFrom(byte[] data)
+    public static Batch parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Batch parseFrom(java.io.InputStream input)
+    public static Batch parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response.Batch parseDelimitedFrom(java.io.InputStream input)
+    public static Batch parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Response.Batch parseDelimitedFrom(
+    public static Batch parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response.Batch parseFrom(
+    public static Batch parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1844,23 +868,23 @@ public final class Response {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Response.Batch prototype) {
+    public static Builder newBuilder(Batch prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1870,18 +894,18 @@ public final class Response {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Batch)
-        Response.BatchOrBuilder {
+        BatchOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Response.internal_static_Batch_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return Response.internal_static_Batch_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Response.Batch.class, Response.Batch.Builder.class);
+                Batch.class, Builder.class);
       }
 
       // Construct using Response.Batch.newBuilder()
@@ -1890,7 +914,7 @@ public final class Response {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1900,7 +924,7 @@ public final class Response {
           getMetricsFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         if (metricsBuilder_ == null) {
@@ -1912,29 +936,29 @@ public final class Response {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return Response.internal_static_Batch_descriptor;
       }
 
-      @java.lang.Override
-      public Response.Batch getDefaultInstanceForType() {
-        return Response.Batch.getDefaultInstance();
+      @Override
+      public Batch getDefaultInstanceForType() {
+        return Batch.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public Response.Batch build() {
-        Response.Batch result = buildPartial();
+      @Override
+      public Batch build() {
+        Batch result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public Response.Batch buildPartial() {
-        Response.Batch result = new Response.Batch(this);
+      @Override
+      public Batch buildPartial() {
+        Batch result = new Batch(this);
         int from_bitField0_ = bitField0_;
         if (metricsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -1949,50 +973,50 @@ public final class Response {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Response.Batch) {
-          return mergeFrom((Response.Batch)other);
+        if (other instanceof Batch) {
+          return mergeFrom((Batch)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Response.Batch other) {
-        if (other == Response.Batch.getDefaultInstance()) return this;
+      public Builder mergeFrom(Batch other) {
+        if (other == Batch.getDefaultInstance()) return this;
         if (metricsBuilder_ == null) {
           if (!other.metrics_.isEmpty()) {
             if (metrics_.isEmpty()) {
@@ -2024,21 +1048,21 @@ public final class Response {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Response.Batch parsedMessage = null;
+        Batch parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Response.Batch) e.getUnfinishedMessage();
+          parsedMessage = (Batch) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2049,22 +1073,22 @@ public final class Response {
       }
       private int bitField0_;
 
-      private java.util.List<Response.Metric> metrics_ =
+      private java.util.List<Metric> metrics_ =
         java.util.Collections.emptyList();
       private void ensureMetricsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          metrics_ = new java.util.ArrayList<Response.Metric>(metrics_);
+          metrics_ = new java.util.ArrayList<Metric>(metrics_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Response.Metric, Response.Metric.Builder, Response.MetricOrBuilder> metricsBuilder_;
+          Metric, Metric.Builder, MetricOrBuilder> metricsBuilder_;
 
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public java.util.List<Response.Metric> getMetricsList() {
+      public java.util.List<Metric> getMetricsList() {
         if (metricsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(metrics_);
         } else {
@@ -2084,7 +1108,7 @@ public final class Response {
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public Response.Metric getMetrics(int index) {
+      public Metric getMetrics(int index) {
         if (metricsBuilder_ == null) {
           return metrics_.get(index);
         } else {
@@ -2095,7 +1119,7 @@ public final class Response {
        * <code>repeated .Metric metrics = 1;</code>
        */
       public Builder setMetrics(
-          int index, Response.Metric value) {
+          int index, Metric value) {
         if (metricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2112,7 +1136,7 @@ public final class Response {
        * <code>repeated .Metric metrics = 1;</code>
        */
       public Builder setMetrics(
-          int index, Response.Metric.Builder builderForValue) {
+          int index, Metric.Builder builderForValue) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           metrics_.set(index, builderForValue.build());
@@ -2125,7 +1149,7 @@ public final class Response {
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public Builder addMetrics(Response.Metric value) {
+      public Builder addMetrics(Metric value) {
         if (metricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2142,7 +1166,7 @@ public final class Response {
        * <code>repeated .Metric metrics = 1;</code>
        */
       public Builder addMetrics(
-          int index, Response.Metric value) {
+          int index, Metric value) {
         if (metricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2159,7 +1183,7 @@ public final class Response {
        * <code>repeated .Metric metrics = 1;</code>
        */
       public Builder addMetrics(
-          Response.Metric.Builder builderForValue) {
+          Metric.Builder builderForValue) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           metrics_.add(builderForValue.build());
@@ -2173,7 +1197,7 @@ public final class Response {
        * <code>repeated .Metric metrics = 1;</code>
        */
       public Builder addMetrics(
-          int index, Response.Metric.Builder builderForValue) {
+          int index, Metric.Builder builderForValue) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           metrics_.add(index, builderForValue.build());
@@ -2187,7 +1211,7 @@ public final class Response {
        * <code>repeated .Metric metrics = 1;</code>
        */
       public Builder addAllMetrics(
-          java.lang.Iterable<? extends Response.Metric> values) {
+          Iterable<? extends Metric> values) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2227,14 +1251,14 @@ public final class Response {
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public Response.Metric.Builder getMetricsBuilder(
+      public Metric.Builder getMetricsBuilder(
           int index) {
         return getMetricsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public Response.MetricOrBuilder getMetricsOrBuilder(
+      public MetricOrBuilder getMetricsOrBuilder(
           int index) {
         if (metricsBuilder_ == null) {
           return metrics_.get(index);  } else {
@@ -2244,7 +1268,7 @@ public final class Response {
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public java.util.List<? extends Response.MetricOrBuilder> 
+      public java.util.List<? extends MetricOrBuilder>
            getMetricsOrBuilderList() {
         if (metricsBuilder_ != null) {
           return metricsBuilder_.getMessageOrBuilderList();
@@ -2255,31 +1279,31 @@ public final class Response {
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public Response.Metric.Builder addMetricsBuilder() {
+      public Metric.Builder addMetricsBuilder() {
         return getMetricsFieldBuilder().addBuilder(
-            Response.Metric.getDefaultInstance());
+            Metric.getDefaultInstance());
       }
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public Response.Metric.Builder addMetricsBuilder(
+      public Metric.Builder addMetricsBuilder(
           int index) {
         return getMetricsFieldBuilder().addBuilder(
-            index, Response.Metric.getDefaultInstance());
+            index, Metric.getDefaultInstance());
       }
       /**
        * <code>repeated .Metric metrics = 1;</code>
        */
-      public java.util.List<Response.Metric.Builder> 
+      public java.util.List<Metric.Builder>
            getMetricsBuilderList() {
         return getMetricsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Response.Metric, Response.Metric.Builder, Response.MetricOrBuilder> 
+          Metric, Metric.Builder, MetricOrBuilder>
           getMetricsFieldBuilder() {
         if (metricsBuilder_ == null) {
           metricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              Response.Metric, Response.Metric.Builder, Response.MetricOrBuilder>(
+              Metric, Metric.Builder, MetricOrBuilder>(
                   metrics_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -2288,13 +1312,13 @@ public final class Response {
         }
         return metricsBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2305,18 +1329,18 @@ public final class Response {
     }
 
     // @@protoc_insertion_point(class_scope:Batch)
-    private static final Response.Batch DEFAULT_INSTANCE;
+    private static final Batch DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Response.Batch();
+      DEFAULT_INSTANCE = new Batch();
     }
 
-    public static Response.Batch getDefaultInstance() {
+    public static Batch getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Batch>
         PARSER = new com.google.protobuf.AbstractParser<Batch>() {
-      @java.lang.Override
+      @Override
       public Batch parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2329,13 +1353,13 @@ public final class Response {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Batch> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public Response.Batch getDefaultInstanceForType() {
+    @Override
+    public Batch getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2346,27 +1370,39 @@ public final class Response {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>int32 rfwid = 1;</code>
+     * @return The rfwid.
      */
-    java.util.List<Response.Batch> 
+    int getRfwid();
+
+    /**
+     * <code>int32 lastID = 2;</code>
+     * @return The lastID.
+     */
+    int getLastID();
+
+    /**
+     * <code>repeated .Batch batches = 3;</code>
+     */
+    java.util.List<Batch>
         getBatchesList();
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
-    Response.Batch getBatches(int index);
+    Batch getBatches(int index);
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
     int getBatchesCount();
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
-    java.util.List<? extends Response.BatchOrBuilder> 
+    java.util.List<? extends BatchOrBuilder>
         getBatchesOrBuilderList();
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
-    Response.BatchOrBuilder getBatchesOrBuilder(
+    BatchOrBuilder getBatchesOrBuilder(
         int index);
   }
   /**
@@ -2385,14 +1421,14 @@ public final class Response {
       batches_ = java.util.Collections.emptyList();
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Batches();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2403,7 +1439,7 @@ public final class Response {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -2416,13 +1452,23 @@ public final class Response {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 8: {
+
+              rfwid_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              lastID_ = input.readInt32();
+              break;
+            }
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                batches_ = new java.util.ArrayList<Response.Batch>();
+                batches_ = new java.util.ArrayList<Batch>();
                 mutable_bitField0_ |= 0x00000001;
               }
               batches_.add(
-                  input.readMessage(Response.Batch.parser(), extensionRegistry));
+                  input.readMessage(Batch.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2452,56 +1498,78 @@ public final class Response {
       return Response.internal_static_Batches_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return Response.internal_static_Batches_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Response.Batches.class, Response.Batches.Builder.class);
+              Batches.class, Builder.class);
     }
 
-    public static final int BATCHES_FIELD_NUMBER = 1;
-    private java.util.List<Response.Batch> batches_;
+    public static final int RFWID_FIELD_NUMBER = 1;
+    private int rfwid_;
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>int32 rfwid = 1;</code>
+     * @return The rfwid.
      */
-    @java.lang.Override
-    public java.util.List<Response.Batch> getBatchesList() {
+    @Override
+    public int getRfwid() {
+      return rfwid_;
+    }
+
+    public static final int LASTID_FIELD_NUMBER = 2;
+    private int lastID_;
+    /**
+     * <code>int32 lastID = 2;</code>
+     * @return The lastID.
+     */
+    @Override
+    public int getLastID() {
+      return lastID_;
+    }
+
+    public static final int BATCHES_FIELD_NUMBER = 3;
+    private java.util.List<Batch> batches_;
+    /**
+     * <code>repeated .Batch batches = 3;</code>
+     */
+    @Override
+    public java.util.List<Batch> getBatchesList() {
       return batches_;
     }
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
-    @java.lang.Override
-    public java.util.List<? extends Response.BatchOrBuilder> 
+    @Override
+    public java.util.List<? extends BatchOrBuilder>
         getBatchesOrBuilderList() {
       return batches_;
     }
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
-    @java.lang.Override
+    @Override
     public int getBatchesCount() {
       return batches_.size();
     }
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
-    @java.lang.Override
-    public Response.Batch getBatches(int index) {
+    @Override
+    public Batch getBatches(int index) {
       return batches_.get(index);
     }
     /**
-     * <code>repeated .Batch batches = 1;</code>
+     * <code>repeated .Batch batches = 3;</code>
      */
-    @java.lang.Override
-    public Response.BatchOrBuilder getBatchesOrBuilder(
+    @Override
+    public BatchOrBuilder getBatchesOrBuilder(
         int index) {
       return batches_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2511,53 +1579,75 @@ public final class Response {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (rfwid_ != 0) {
+        output.writeInt32(1, rfwid_);
+      }
+      if (lastID_ != 0) {
+        output.writeInt32(2, lastID_);
+      }
       for (int i = 0; i < batches_.size(); i++) {
-        output.writeMessage(1, batches_.get(i));
+        output.writeMessage(3, batches_.get(i));
       }
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
+      if (rfwid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, rfwid_);
+      }
+      if (lastID_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, lastID_);
+      }
       for (int i = 0; i < batches_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, batches_.get(i));
+          .computeMessageSize(3, batches_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Response.Batches)) {
+      if (!(obj instanceof Batches)) {
         return super.equals(obj);
       }
-      Response.Batches other = (Response.Batches) obj;
+      Batches other = (Batches) obj;
 
+      if (getRfwid()
+          != other.getRfwid()) return false;
+      if (getLastID()
+          != other.getLastID()) return false;
       if (!getBatchesList()
           .equals(other.getBatchesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RFWID_FIELD_NUMBER;
+      hash = (53 * hash) + getRfwid();
+      hash = (37 * hash) + LASTID_FIELD_NUMBER;
+      hash = (53 * hash) + getLastID();
       if (getBatchesCount() > 0) {
         hash = (37 * hash) + BATCHES_FIELD_NUMBER;
         hash = (53 * hash) + getBatchesList().hashCode();
@@ -2567,69 +1657,69 @@ public final class Response {
       return hash;
     }
 
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Batches parseFrom(byte[] data)
+    public static Batches parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Response.Batches parseFrom(java.io.InputStream input)
+    public static Batches parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response.Batches parseDelimitedFrom(java.io.InputStream input)
+    public static Batches parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Response.Batches parseDelimitedFrom(
+    public static Batches parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Response.Batches parseFrom(
+    public static Batches parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2637,23 +1727,23 @@ public final class Response {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Response.Batches prototype) {
+    public static Builder newBuilder(Batches prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2663,18 +1753,18 @@ public final class Response {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Batches)
-        Response.BatchesOrBuilder {
+        BatchesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return Response.internal_static_Batches_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return Response.internal_static_Batches_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Response.Batches.class, Response.Batches.Builder.class);
+                Batches.class, Builder.class);
       }
 
       // Construct using Response.Batches.newBuilder()
@@ -2683,7 +1773,7 @@ public final class Response {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2693,9 +1783,13 @@ public final class Response {
           getBatchesFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
+        rfwid_ = 0;
+
+        lastID_ = 0;
+
         if (batchesBuilder_ == null) {
           batches_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -2705,30 +1799,32 @@ public final class Response {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return Response.internal_static_Batches_descriptor;
       }
 
-      @java.lang.Override
-      public Response.Batches getDefaultInstanceForType() {
-        return Response.Batches.getDefaultInstance();
+      @Override
+      public Batches getDefaultInstanceForType() {
+        return Batches.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public Response.Batches build() {
-        Response.Batches result = buildPartial();
+      @Override
+      public Batches build() {
+        Batches result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public Response.Batches buildPartial() {
-        Response.Batches result = new Response.Batches(this);
+      @Override
+      public Batches buildPartial() {
+        Batches result = new Batches(this);
         int from_bitField0_ = bitField0_;
+        result.rfwid_ = rfwid_;
+        result.lastID_ = lastID_;
         if (batchesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             batches_ = java.util.Collections.unmodifiableList(batches_);
@@ -2742,50 +1838,56 @@ public final class Response {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Response.Batches) {
-          return mergeFrom((Response.Batches)other);
+        if (other instanceof Batches) {
+          return mergeFrom((Batches)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Response.Batches other) {
-        if (other == Response.Batches.getDefaultInstance()) return this;
+      public Builder mergeFrom(Batches other) {
+        if (other == Batches.getDefaultInstance()) return this;
+        if (other.getRfwid() != 0) {
+          setRfwid(other.getRfwid());
+        }
+        if (other.getLastID() != 0) {
+          setLastID(other.getLastID());
+        }
         if (batchesBuilder_ == null) {
           if (!other.batches_.isEmpty()) {
             if (batches_.isEmpty()) {
@@ -2817,21 +1919,21 @@ public final class Response {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Response.Batches parsedMessage = null;
+        Batches parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Response.Batches) e.getUnfinishedMessage();
+          parsedMessage = (Batches) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2842,22 +1944,84 @@ public final class Response {
       }
       private int bitField0_;
 
-      private java.util.List<Response.Batch> batches_ =
+      private int rfwid_ ;
+      /**
+       * <code>int32 rfwid = 1;</code>
+       * @return The rfwid.
+       */
+      @Override
+      public int getRfwid() {
+        return rfwid_;
+      }
+      /**
+       * <code>int32 rfwid = 1;</code>
+       * @param value The rfwid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRfwid(int value) {
+        
+        rfwid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 rfwid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRfwid() {
+        
+        rfwid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int lastID_ ;
+      /**
+       * <code>int32 lastID = 2;</code>
+       * @return The lastID.
+       */
+      @Override
+      public int getLastID() {
+        return lastID_;
+      }
+      /**
+       * <code>int32 lastID = 2;</code>
+       * @param value The lastID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastID(int value) {
+        
+        lastID_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 lastID = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastID() {
+        
+        lastID_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<Batch> batches_ =
         java.util.Collections.emptyList();
       private void ensureBatchesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          batches_ = new java.util.ArrayList<Response.Batch>(batches_);
+          batches_ = new java.util.ArrayList<Batch>(batches_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Response.Batch, Response.Batch.Builder, Response.BatchOrBuilder> batchesBuilder_;
+          Batch, Batch.Builder, BatchOrBuilder> batchesBuilder_;
 
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public java.util.List<Response.Batch> getBatchesList() {
+      public java.util.List<Batch> getBatchesList() {
         if (batchesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(batches_);
         } else {
@@ -2865,7 +2029,7 @@ public final class Response {
         }
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public int getBatchesCount() {
         if (batchesBuilder_ == null) {
@@ -2875,9 +2039,9 @@ public final class Response {
         }
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public Response.Batch getBatches(int index) {
+      public Batch getBatches(int index) {
         if (batchesBuilder_ == null) {
           return batches_.get(index);
         } else {
@@ -2885,10 +2049,10 @@ public final class Response {
         }
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder setBatches(
-          int index, Response.Batch value) {
+          int index, Batch value) {
         if (batchesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2902,10 +2066,10 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder setBatches(
-          int index, Response.Batch.Builder builderForValue) {
+          int index, Batch.Builder builderForValue) {
         if (batchesBuilder_ == null) {
           ensureBatchesIsMutable();
           batches_.set(index, builderForValue.build());
@@ -2916,9 +2080,9 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public Builder addBatches(Response.Batch value) {
+      public Builder addBatches(Batch value) {
         if (batchesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2932,10 +2096,10 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder addBatches(
-          int index, Response.Batch value) {
+          int index, Batch value) {
         if (batchesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2949,10 +2113,10 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder addBatches(
-          Response.Batch.Builder builderForValue) {
+          Batch.Builder builderForValue) {
         if (batchesBuilder_ == null) {
           ensureBatchesIsMutable();
           batches_.add(builderForValue.build());
@@ -2963,10 +2127,10 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder addBatches(
-          int index, Response.Batch.Builder builderForValue) {
+          int index, Batch.Builder builderForValue) {
         if (batchesBuilder_ == null) {
           ensureBatchesIsMutable();
           batches_.add(index, builderForValue.build());
@@ -2977,10 +2141,10 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder addAllBatches(
-          java.lang.Iterable<? extends Response.Batch> values) {
+          Iterable<? extends Batch> values) {
         if (batchesBuilder_ == null) {
           ensureBatchesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2992,7 +2156,7 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder clearBatches() {
         if (batchesBuilder_ == null) {
@@ -3005,7 +2169,7 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
       public Builder removeBatches(int index) {
         if (batchesBuilder_ == null) {
@@ -3018,16 +2182,16 @@ public final class Response {
         return this;
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public Response.Batch.Builder getBatchesBuilder(
+      public Batch.Builder getBatchesBuilder(
           int index) {
         return getBatchesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public Response.BatchOrBuilder getBatchesOrBuilder(
+      public BatchOrBuilder getBatchesOrBuilder(
           int index) {
         if (batchesBuilder_ == null) {
           return batches_.get(index);  } else {
@@ -3035,9 +2199,9 @@ public final class Response {
         }
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public java.util.List<? extends Response.BatchOrBuilder> 
+      public java.util.List<? extends BatchOrBuilder>
            getBatchesOrBuilderList() {
         if (batchesBuilder_ != null) {
           return batchesBuilder_.getMessageOrBuilderList();
@@ -3046,33 +2210,33 @@ public final class Response {
         }
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public Response.Batch.Builder addBatchesBuilder() {
+      public Batch.Builder addBatchesBuilder() {
         return getBatchesFieldBuilder().addBuilder(
-            Response.Batch.getDefaultInstance());
+            Batch.getDefaultInstance());
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public Response.Batch.Builder addBatchesBuilder(
+      public Batch.Builder addBatchesBuilder(
           int index) {
         return getBatchesFieldBuilder().addBuilder(
-            index, Response.Batch.getDefaultInstance());
+            index, Batch.getDefaultInstance());
       }
       /**
-       * <code>repeated .Batch batches = 1;</code>
+       * <code>repeated .Batch batches = 3;</code>
        */
-      public java.util.List<Response.Batch.Builder> 
+      public java.util.List<Batch.Builder>
            getBatchesBuilderList() {
         return getBatchesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Response.Batch, Response.Batch.Builder, Response.BatchOrBuilder> 
+          Batch, Batch.Builder, BatchOrBuilder>
           getBatchesFieldBuilder() {
         if (batchesBuilder_ == null) {
           batchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              Response.Batch, Response.Batch.Builder, Response.BatchOrBuilder>(
+              Batch, Batch.Builder, BatchOrBuilder>(
                   batches_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -3081,13 +2245,13 @@ public final class Response {
         }
         return batchesBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3098,18 +2262,18 @@ public final class Response {
     }
 
     // @@protoc_insertion_point(class_scope:Batches)
-    private static final Response.Batches DEFAULT_INSTANCE;
+    private static final Batches DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Response.Batches();
+      DEFAULT_INSTANCE = new Batches();
     }
 
-    public static Response.Batches getDefaultInstance() {
+    public static Batches getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Batches>
         PARSER = new com.google.protobuf.AbstractParser<Batches>() {
-      @java.lang.Override
+      @Override
       public Batches parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3122,28 +2286,18 @@ public final class Response {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Batches> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public Response.Batches getDefaultInstanceForType() {
+    @Override
+    public Batches getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Rfwid_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Rfwid_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_LastBatchID_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_LastBatchID_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Metric_descriptor;
   private static final 
@@ -3167,47 +2321,35 @@ public final class Response {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\016response.proto\"\026\n\005Rfwid\022\r\n\005rfwid\030\001 \001(\005" +
-      "\"\035\n\013LastBatchID\022\016\n\006lastID\030\001 \001(\005\"$\n\006Metri" +
-      "c\022\n\n\002id\030\001 \001(\005\022\016\n\006metric\030\002 \001(\001\"!\n\005Batch\022\030" +
-      "\n\007metrics\030\001 \003(\0132\007.Metric\"\"\n\007Batches\022\027\n\007b" +
-      "atches\030\001 \003(\0132\006.BatchB\nB\010Responseb\006proto3"
+    String[] descriptorData = {
+      "\n\016response.proto\"$\n\006Metric\022\n\n\002id\030\001 \001(\005\022\016" +
+      "\n\006metric\030\002 \001(\001\"!\n\005Batch\022\030\n\007metrics\030\001 \003(\013" +
+      "2\007.Metric\"A\n\007Batches\022\r\n\005rfwid\030\001 \001(\005\022\016\n\006l" +
+      "astID\030\002 \001(\005\022\027\n\007batches\030\003 \003(\0132\006.BatchB\nB\010" +
+      "Responseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_Rfwid_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_Rfwid_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Rfwid_descriptor,
-        new java.lang.String[] { "Rfwid", });
-    internal_static_LastBatchID_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_LastBatchID_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_LastBatchID_descriptor,
-        new java.lang.String[] { "LastID", });
     internal_static_Metric_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_Metric_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Metric_descriptor,
-        new java.lang.String[] { "Id", "Metric", });
+        new String[] { "Id", "Metric", });
     internal_static_Batch_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_Batch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Batch_descriptor,
-        new java.lang.String[] { "Metrics", });
+        new String[] { "Metrics", });
     internal_static_Batches_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_Batches_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Batches_descriptor,
-        new java.lang.String[] { "Batches", });
+        new String[] { "Rfwid", "LastID", "Batches", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

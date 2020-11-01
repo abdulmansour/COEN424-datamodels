@@ -1,14 +1,14 @@
 package com.coen424.datamodels.models;
 
 public class Request {
-    private String rfwid;
+    private int rfwid;
     private String benchmarkType;
     private String workloadMetric;
     private int batchUnit;
     private int batchId;
     private int batchSize;
 
-    public Request(String rfwid, String benchmarkType, String workloadMetric, int batchUnit, int batchId, int batchSize) {
+    public Request(int rfwid, String benchmarkType, String workloadMetric, int batchUnit, int batchId, int batchSize) {
         this.rfwid = rfwid;
         this.benchmarkType = benchmarkType;
         this.workloadMetric = workloadMetric;
@@ -17,11 +17,11 @@ public class Request {
         this.batchSize = batchSize;
     }
 
-    public String getRfwid() {
+    public int getRfwid() {
         return rfwid;
     }
 
-    public void setRfwid(String rfwid) {
+    public void setRfwid(int rfwid) {
         this.rfwid = rfwid;
     }
 
