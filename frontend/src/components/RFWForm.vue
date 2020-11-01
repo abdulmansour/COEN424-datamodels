@@ -40,11 +40,23 @@
       <input type="submit" value="Submit"/>
     </form>
     
-    <div>
-      <p>{{ this.desirealizedData }}</p>
+    <div v-if="deserializedData">
+      <p>
+        RFW ID: {{deserializedData.rfwid}} <br>
+        Last Batch ID: {{deserializedData.lastID}} <br>
+      </p>
+      <div :key="index" v-for="(batch, index) in deserializedData.batchLists">
+        <div style="margin-top: 1rem">
+          <strong>Batch: {{index}}</strong>
+        </div>
+        <hr>
+        <div :key="index" v-for="(metric, index) in batch.array[0]">
+          {{metric[0]}}: {{metric[1]}}
+        </div>
+      </div>
+      <br>
+      <button class="button" @click="clearDeserializedData">Clear</button>
     </div>
-
-    <button v-if='this.desirealizedData !== ""' class="button" @click="clearDeserializedData">Clear</button>
     
   </div>
 </template>
@@ -68,7 +80,7 @@ export default {
       batchId: 1,
       batchSize: 2,
 
-      desirealizedData: ""
+      deserializedData: null
     }
   },
   methods: {
@@ -88,8 +100,8 @@ export default {
           .then(data => {
 
               this.desirealizedData = data;
-              console.log('deserializedData', this.desirealizedData);
-              console.log('deserializedData stringified', JSON.stringify(this.desirealizedData, null, 2));
+              console.log('deserializedData', this.deserializedData);
+              console.log('deserializedData stringified', JSON.stringify(this.deserializedData, null, 2));
               
           })
           .catch((error) => {
@@ -113,9 +125,13 @@ export default {
               console.log('response', output.getLastid());
               console.log('response', output.getBatchesList());  
               
-              const batchList = output.getBatchesList(); //array of our metrics
+              //const batchList = output.getBatchesList(); //array of our metrics
 
-              this.desirealizedData = "RFW ID: " + output.getRfwid() + "\nLast Batch ID: " + output.getLastid() + "\nYour Requested Batches:\n";
+              this.deserializedData = {
+                rfwid: output.getRfwid(), 
+                lastID: output.getLastid(), 
+                batchLists: output.getBatchesList()
+              }
 
               console.log('Deserialization of json data...');
               //deserialization of data received from the backend
@@ -127,7 +143,7 @@ export default {
       }
     },
     clearDeserializedData() {
-      this.desirealizedData = "";
+      this.deserializedData = null;
     }
   }
 }
