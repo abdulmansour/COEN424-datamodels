@@ -40,14 +40,15 @@
       <input type="submit" value="Submit"/>
     </form>
     
-    <div v-if="deserializedData">
+    <div v-if="deserializedDataProto">
+      <h3>Proto</h3>
       <p>
-        RFW ID: {{deserializedData.rfwid}} <br>
-        Last Batch ID: {{deserializedData.lastID}} <br>
+        RFW ID: {{deserializedDataProto.rfwid}} <br>
+        Last Batch ID: {{deserializedDataProto.lastID}} <br>
       </p>
-      <div :key="index" v-for="(batch, index) in deserializedData.batchLists">
+      <div :key="index" v-for="(batch, index) in deserializedDataProto.batchLists">
         <div style="margin-top: 1rem">
-          <strong>Batch: {{index}}</strong>
+          <strong>Batch: {{deserializedDataProto.lastID - deserializedDataProto.batchLists.length + 1 + index}}</strong>
         </div>
         <hr>
         <div :key="index" v-for="(metric, index) in batch.array[0]">
@@ -55,9 +56,29 @@
         </div>
       </div>
       <br>
-      <button class="button" @click="clearDeserializedData">Clear</button>
     </div>
-    
+
+    <div v-if="deserializedDataJson">
+      <h3>Json</h3>
+      <p>
+        RFW ID: {{deserializedDataJson.rfwid}} <br>
+        Last Batch ID: {{deserializedDataJson.lastBatchId}} <br>
+      </p>
+      <div :key="index" v-for="(batch, index) in deserializedDataJson.samplesRequested">
+        <div style="margin-top: 1rem">
+          <strong>Batch: {{deserializedDataJson.lastBatchId - deserializedDataJson.samplesRequested.length + 1 + index}}</strong>
+        </div>
+        <hr>
+        <div :key="index" v-for="(metric, index) in batch">
+          {{metric.chosenMetric}}
+        </div>
+      </div>
+      <br>
+      
+    </div>
+    <div v-if="deserializedDataJson || deserializedDataProto">
+      <button class="button" @click="cleardeserializedData">Clear</button>
+    </div>
   </div>
 </template>
 
@@ -80,7 +101,9 @@ export default {
       batchId: 1,
       batchSize: 2,
 
-      deserializedData: null
+      deserializedDataProto: null,
+      deserializedDataJson: null
+
     }
   },
   methods: {
@@ -99,9 +122,9 @@ export default {
           .then(response => response.json())
           .then(data => {
 
-              this.desirealizedData = data;
-              console.log('deserializedData', this.deserializedData);
-              console.log('deserializedData stringified', JSON.stringify(this.deserializedData, null, 2));
+              this.deserializedDataJson = data;
+              console.log('deserializedDataJson', this.deserializedDataJson);
+              console.log('deserializedDataJson stringified', JSON.stringify(this.deserializedDataJson, null, 2));
               
           })
           .catch((error) => {
@@ -127,7 +150,7 @@ export default {
               
               //const batchList = output.getBatchesList(); //array of our metrics
 
-              this.deserializedData = {
+              this.deserializedDataProto = {
                 rfwid: output.getRfwid(), 
                 lastID: output.getLastid(), 
                 batchLists: output.getBatchesList()
@@ -142,8 +165,9 @@ export default {
           });
       }
     },
-    clearDeserializedData() {
-      this.deserializedData = null;
+    cleardeserializedData() {
+      this.deserializedDataProto = null;
+      this.deserializedDataJson = null;
     }
   }
 }
