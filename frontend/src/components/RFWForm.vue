@@ -32,7 +32,7 @@
       <input type="number" min="1" v-model="batchUnit" required/>
 
       <label>Batch ID</label> <!-- start at row:  batch id * batch unit-->
-      <input type="number" min="1" v-model="batchId" required/>
+      <input type="number" min="0" v-model="batchId" required/>
 
       <label>Batch Size</label> <!-- how many batches you want -->
       <input type="number" min="1" v-model="batchSize" required/>
@@ -66,7 +66,7 @@
       </p>
       <div :key="index" v-for="(batch, index) in deserializedDataJson.samplesRequested">
         <div style="margin-top: 1rem">
-          <strong>Batch: {{deserializedDataJson.lastBatchId - deserializedDataJson.samplesRequested.length + 1 + index}}</strong>
+          <strong>Batch: {{deserializedDataJson.lastBatchId - deserializedDataJson.samplesRequested.length + index}}</strong>
         </div>
         <hr>
         <div :key="index" v-for="(metric, index) in batch">

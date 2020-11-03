@@ -78,7 +78,7 @@ public class WorkloadService {
             }
         }
 
-        int start = request.getBatchId() - 1 <= batches.size()? request.getBatchId() - 1:batches.size()-1;
+        int start = request.getBatchId() <= batches.size()? request.getBatchId():batches.size()-1;
         int end = start + request.getBatchSize();
         end = Math.min(end, batches.size());
         List<List<Metric>> requiredBatches = batches.subList(start, end);
